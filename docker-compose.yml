@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  # PHP (with Caddy)
+  web:
+    image: blendosantos/php-7.4.3-apache-mssql:1.0
+    container_name: web
+    restart: always
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "80:80"
